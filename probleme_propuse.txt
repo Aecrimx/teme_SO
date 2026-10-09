@@ -1,0 +1,22 @@
+Procese si thread-uri - problema 3
+ncrurses - Breakout
+
+
+3. Scrieti un program 'copy' care se va lansa sub forma:
+     copy   f1 ... fn    f
+ (unde 'f1', ..., 'fn', 'f' sunt fisiere) si care are ca efect crearea sau
+ suprascrierea fisierului 'f' a.i. sa contina concatenarea fisierelor
+ 'f1', ..., 'fn'; daca n = 1, se copiaza 'f1' in 'f'.
+   Programul isi va mapa cu 'mmap()' fisierul 'f' in memorie si va folosi
+ biblioteca 'Pthreads' pentru a genera n thread-uri paralele care vor copia
+ fiecare cate un fisier 'fi' in zona corespunzatoare din 'f'. In final, va
+ astepta terminarea thread-urilor si se va termina.
+
+1. Scrieti un joc de tip breakout: intr-o fereastra, la baza se deplaseaza
+stanga/dreapta (prin sageti) o paleta, iar deasupra se afla niste caramizi; 
+o minge se deplaseaza automat, ricosand in paleta, pereti, caramizi; daca
+atinge o caramida, caramida dispare si se puncteaza; numarul de puncte
+curent este aifsat/actualizat in permanenta intr-un colt; daca mingea atinge
+baza ferestrei, dispare si se pierde jocul; jocul incepe cu mingea pe
+paleta, la apasarea unei taste; jocul se incheie la pierderea mingii, la
+disparitia tuturor caramizilor sau la apasarea unei taste dedicate.
